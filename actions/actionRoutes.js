@@ -51,7 +51,7 @@ router.get('/:id', (req, res) => {
 
 
 
-  router.put('/:id', (req, res) => {
+  router.put('/edit/:id', (req, res) => {
     db.update(req.params.id, req.body)
     .then((actions) => {
       if (actions === 0) {

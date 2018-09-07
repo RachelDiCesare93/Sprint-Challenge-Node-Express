@@ -46,7 +46,7 @@ router.get('/:id', (req, res) => {
       })
   })
 
-  router.put('/:id', (req, res) => {
+  router.put('/edit/:id', (req, res) => {
     db.update(req.params.id, req.body)
     .then((projects) => {
       if (projects === 0) {
